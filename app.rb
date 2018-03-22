@@ -12,12 +12,16 @@ class App < Sinatra::Base
   end
 
   get '/say/:number/:phrase' do
-    array = []
-    @number = params[:number].to_i
-    while array.length < @number
-      array << params[:phrase]
-    end
-    array.join(" ")
+    # array = []
+    # @number = params[:number].to_i
+    # while array.length < @number
+    #   array << params[:phrase]
+    # end
+    # array.join(" ")
+
+    @number = params[:number].to_i 
+    @phrase = params[:phrase]
+    @number * @phrase 
     end
 
 
