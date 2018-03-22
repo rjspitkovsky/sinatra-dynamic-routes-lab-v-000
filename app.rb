@@ -12,7 +12,7 @@ class App < Sinatra::Base
   end
 
   get '/say/:number/:phrase' do
-    params[:number].to_i + 1 * params[:phrase]
+    params[:number].to_i * params[:phrase]
     end
 
 
@@ -23,7 +23,7 @@ class App < Sinatra::Base
   get '/:operation/:num1/:num2' do
     @result = params[:num1].to_i params[:operation].to_sym params[:num2].to_i
     @result.to_s
-  end 
+  end
 
 
 end
