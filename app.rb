@@ -17,9 +17,13 @@ class App < Sinatra::Base
 
 
   get '/say/:word1/:word2/:word3/:word4/:word5' do
-    #params[:word1] + " " params[:word2] + params[:word3] + params[:word4] + params[:word5]
     params.values.join(" ") + "."
   end
+
+  get '/:operation/:num1/:num2' do
+    @result = params[:num1].to_i params[:operation].to_sym params[:num2].to_i
+    @result.to_s
+  end 
 
 
 end
