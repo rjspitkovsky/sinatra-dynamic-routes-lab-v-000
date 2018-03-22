@@ -17,7 +17,7 @@ class App < Sinatra::Base
       while x < @number
         puts params[:phrase]
         x += 1
-      end 
-    end
+      end
+    
   end
 end
