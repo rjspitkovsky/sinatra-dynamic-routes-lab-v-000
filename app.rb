@@ -15,9 +15,9 @@ class App < Sinatra::Base
       @number = params[:number].to_i
       x = 0
       while x < @number
-        puts params[:phrase]
+        puts "Hello world"
         x += 1
       end
-    
+
   end
 end
