@@ -19,7 +19,7 @@ class App < Sinatra::Base
     # end
     # array.join(" ")
 
-    @number = params[:number].to_i 
+    @number = params[:number].to_i
     @phrase = params[:phrase]
     @number * @phrase 
     end
