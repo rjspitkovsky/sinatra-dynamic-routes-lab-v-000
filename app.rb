@@ -21,9 +21,11 @@ class App < Sinatra::Base
   end
 
   get '/:operation/:num1/:num2' do
-    @operation = params[:operation]
-    @result = params[:num1].to_i @operation.to_sym params[:num2].to_i
-    @result.to_s
+    if params[:operation] == "add"
+      @result = params[:num1] + params[:num2] 
+      @result.to_s 
+    end 
+    
   end
 
 
